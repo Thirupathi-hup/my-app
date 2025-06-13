@@ -4,6 +4,8 @@ const { MongoClient, ObjectId } = require("mongodb");
 const cors = require("cors");
 const Joi = require('joi');
 
+process.env.NODE_OPTIONS = "--dns-result-order=ipv4first";
+
 const app = express();
 const PORT = process.env.PORT || 5000;
 
